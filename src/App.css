@@ -1,0 +1,67 @@
+body {
+  background-color: #000!important;
+  color: #fcfcfc!important;
+  font-family: 'Roboto', sans-serif!important;
+}
+
+.card-filme {
+  /* background-color: #6c6b6b; */
+  color: #fcfcfc;
+  width: 80%;
+  text-align: center;
+}
+
+.card-filme img{
+  width: 100%;
+  height: 450px;
+}
+
+.section-itens {
+  display: flex;
+  justify-content: space-around;
+}
+
+h3{
+  margin: 0;
+  margin-top: 10px;
+}
+
+.sub-title {
+  border-left: red solid 4px;
+  padding-left: 8px;
+}
+
+.titulo-card {
+  display: flex;
+  justify-content: end;
+  position: relative; 
+}
+
+.titulo-card .fa-star {
+  position: absolute;
+  filter: drop-shadow(1px 0px 7px #fff);
+}
+
+.size-img {
+  height: 200px;
+}
+
+
+/**************RESPONSIVIDADE************/
+@media screen and (max-width: 600px) {
+  .card-filme{
+    width: 45%;
+    margin-top: 10px;
+  }
+
+  .section-itens{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card-filme img{
+    height: 200px;
+  }
+}
+
