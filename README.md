@@ -60,5 +60,3 @@ Abra http://localhost:3000 para visualizar no navegador.
 ## Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests para melhorar este projeto.
 
-Autor
-Desenvolvido por [Seu Nome] para a disciplina de Tecnologia da Informação, curso técnico em Informática - TI112.
