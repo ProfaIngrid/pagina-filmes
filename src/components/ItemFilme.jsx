@@ -21,7 +21,7 @@ const ItemFilme = ({titulo, imagem, favorito}) => {
           }
           <img src={imagem} alt={titulo}/>
         </div>
-        <h3>{titulo}</h3>
+        <h3 className='titulo-font'>{titulo}</h3>
       </div>
   )
 }

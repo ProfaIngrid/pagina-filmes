@@ -12,8 +12,8 @@ body {
 }
 
 .card-filme img{
-  width: 100%;
-  height: 450px;
+  width: 80%;
+  height: 350px;
 }
 
 .section-itens {
@@ -27,8 +27,9 @@ h3{
 }
 
 .sub-title {
-  border-left: red solid 4px;
+  border-left: red solid 3px;
   padding-left: 8px;
+  margin: 15px;
 }
 
 .sub-title-mt{
@@ -63,10 +64,13 @@ h3{
   text-transform: uppercase;
 }
 
+.carousel-inner{
+  height: 470px;
+}
+
 /**************RESPONSIVIDADE************/
 @media screen and (max-width: 600px) {
   .card-filme{
-    width: 45%;
     margin-top: 10px;
   }
 
@@ -78,6 +82,14 @@ h3{
 
   .card-filme img{
     height: 200px;
+  }
+
+  .titulo-font{
+    font-size: 13px!important;
+  }
+
+  .carousel-inner{
+    height: 290px;
   }
 }
 
