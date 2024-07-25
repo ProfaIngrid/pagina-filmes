@@ -95,6 +95,10 @@ h3{
   width: 100%;
 }
 
+a {
+  text-decoration: none!important;
+}
+
 /**************RESPONSIVIDADE************/
 @media screen and (max-width: 600px) {
   .card-filme{
