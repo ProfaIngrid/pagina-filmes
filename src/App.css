@@ -68,6 +68,33 @@ h3{
   height: 470px;
 }
 
+.exibe-titulo-body{
+  display: flex;
+  margin: 100px 40px;
+}
+
+.exibe-titulo-body img {
+  width: 20%;
+  height: 450px;
+}
+
+.exibe-titulo-desc{
+  margin: 0 20px;
+  width: 60%;
+}
+
+.accordion-item, 
+.accordion-header button {
+  background-color: #fff0!important;
+  color: #fff!important;
+  border: 1px solid #f0f0f0!important;
+}
+
+.exibe-titulo-video{
+  height: 450px;
+  width: 100%;
+}
+
 /**************RESPONSIVIDADE************/
 @media screen and (max-width: 600px) {
   .card-filme{
@@ -91,5 +118,27 @@ h3{
   .carousel-inner{
     height: 290px;
   }
+
+  .exibe-titulo-body{
+    margin: 130px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .exibe-titulo-body img {
+    width: 60%;
+    height: 50%;
+  }
+  
+  .exibe-titulo-desc {
+    margin: 0 10px;
+    width: 100%;
+  }
+
+  .exibe-titulo-video{
+    height: auto;
+  }
+
 }
 
