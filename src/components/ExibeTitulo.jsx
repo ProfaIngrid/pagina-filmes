@@ -1,20 +1,19 @@
 import Header from "./Header";
-import Filme1 from '../img/filme1.jpg';
 import Accordion from 'react-bootstrap/Accordion';
 
-const ExibeTitulo = () => {
+const ExibeTitulo = ({catalago}) => {
     return(
         <>
             <Header/>
             <div className="exibe-titulo-body">
-                <img src={Filme1} alt="Abigail" />
+                <img src={catalago.imagem} alt={catalago.nome} />
                 <div className="exibe-titulo-desc">
-                    <h2>Abigail</h2>
+                    <h2>{catalago.nome}</h2>
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>Sinopse</Accordion.Header>
                             <Accordion.Body>
-                                teste de Sinopse
+                                {catalago.nome}
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="1">
