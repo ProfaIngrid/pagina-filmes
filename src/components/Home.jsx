@@ -9,8 +9,25 @@ import Serie4 from '../img/hod.jpg';
 import ItemFilme from './ItemFilme';
 import CatalagoItens from './CatalagoItens';
 import Header from './Header';
+import { fetchTopFilmes } from '../services/tmdbService';
+import { useState, useEffect } from 'react';
 
 const Home = () => {
+    const [topFilmes, setTopFilmes] = useState([]);
+
+    useEffect(() => {
+      const fetchTitulos = async () => {
+        try {
+          const listaFilmes = await fetchTopFilmes();
+          setTopFilmes(listaFilmes);
+        } catch (error) {
+          console.error('Erro ao buscar titulos: ', error);
+        }
+      }
+
+      fetchTitulos();
+    }, []);
+
     const catalagoFilmes = [
         { nome: 'Abigail', imagem: Filme1 },
         { nome: 'Rivais', imagem: Filme2 },

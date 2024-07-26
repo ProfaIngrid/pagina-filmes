@@ -31,7 +31,7 @@ function App() {
       element: <Home/>
     },
     {
-      path: '/exibetitulo',
+      path: '/exibetitulo/:nome',
       element: <ExibeTitulo catalago={catalagoFilmes}/>
     }
   ])

@@ -4,7 +4,7 @@ import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
 
-const ItemFilme = ({titulo, imagem, favorito}) => {
+const ItemFilme = ({titulo, imagem}) => {
   const [fav, setFav] = useState();
 
   const handleFavClick = (e) => {
@@ -14,7 +14,7 @@ const ItemFilme = ({titulo, imagem, favorito}) => {
   }
 
   return(
-    <Link to={'/exibetitulo'}>
+    <Link to={`/exibetitulo/${titulo}`}>
       <div className='card-filme'>
         <div className='titulo-card'>
           {
