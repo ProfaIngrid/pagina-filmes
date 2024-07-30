@@ -43,3 +43,16 @@ export const fetchTopSeries = async () => {
         return [];
     }
 };
+
+export const fetchTopTitulos = async () => {
+    try {
+        const [filmes, series] = await Promise.all([fetchTopFilmes(), fetchTopSeries()]);
+
+        const topTitulos = [...filmes, ...series];
+
+        return topTitulos;
+    } catch (error) {
+        console.error("Erro ao buscar top títulos:", error);
+        return [];
+    }
+}
