@@ -22,3 +22,24 @@ export const fetchTopFilmes = async () => {
         return [];
     }
 };
+
+export const fetchTopSeries = async () => {
+    try {
+        const response = await axios.get(`https://api.themoviedb.org/3/trending/tv/week?api_key=${apiKey}&language=pt-BR`);
+        // return response.data.results;
+        const dadosFilme = response.data.results;
+
+        const dadosFilmeTrad = dadosFilme.map(({ id, title, poster_path, overview }) => ({ 
+            id : id,
+            nome: name,
+            imagem: 'https://image.tmdb.org/t/p/original/'+poster_path,
+            sinopse: overview
+        }));
+        
+        return dadosFilmeTrad;
+        
+    } catch (error) {
+        console.error("Erro ao buscar top series");
+        return [];
+    }
+};

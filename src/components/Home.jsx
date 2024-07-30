@@ -9,17 +9,20 @@ import Serie4 from '../img/hod.jpg';
 import ItemFilme from './ItemFilme';
 import CatalagoItens from './CatalagoItens';
 import Header from './Header';
-import { fetchTopFilmes } from '../services/tmdbService';
+import { fetchTopFilmes, fetchTopSeries } from '../services/tmdbService';
 import { useState, useEffect } from 'react';
 
 const Home = () => {
     const [topFilmes, setTopFilmes] = useState([]);
+    const [topSeries, setTopSeries] = useState([]);
 
     useEffect(() => {
       const fetchTitulos = async () => {
         try {
           const listaFilmes = await fetchTopFilmes();
+          const listaSeries = await fetchTopSeries();
           setTopFilmes(listaFilmes);
+          setTopSeries(listaSeries);
         } catch (error) {
           console.error('Erro ao buscar titulos: ', error);
         }
@@ -28,35 +31,17 @@ const Home = () => {
       fetchTitulos();
     }, []);
 
-    const catalagoFilmes = [
-        { nome: 'Abigail', imagem: Filme1 },
-        { nome: 'Rivais', imagem: Filme2 },
-        { nome: 'Guerra Civil', imagem: Filme3 },
-        { nome: 'Divertida Mente 2', imagem: Filme4 },
-        { nome: 'Game of Thrones', imagem: Serie1 },
-        { nome: 'Lucifer', imagem: Serie2 },
-        { nome: 'Friends', imagem: Serie3 },
-        { nome: 'House of the Dragon', imagem: Serie4 }
-      ];
-    
-      const catalagoSeries = [
-        { nome: 'Game of Thrones', imagem: Serie1 },
-        { nome: 'Lucifer', imagem: Serie2 },
-        { nome: 'Friends', imagem: Serie3 },
-        { nome: 'House of the Dragon', imagem: Serie4 }
-      ]
-    
       return (
         <>
           <Header/>
           <CatalagoItens 
             titulo="Filmes"
-            catalagos={catalagoFilmes}
+            catalagos={topFilmes}
             tituloMt={true}
           />
           <CatalagoItens 
             titulo="Series"
-            catalagos={catalagoSeries}
+            catalagos={topSeries}
           />
         </>
       )
